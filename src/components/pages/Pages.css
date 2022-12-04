@@ -1,0 +1,17 @@
+.header-title{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #61dafb;
+}
+.footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+.container-login{
+    display: flex;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
