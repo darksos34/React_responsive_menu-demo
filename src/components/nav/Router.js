@@ -2,9 +2,9 @@ import {Route, Routes} from "react-router-dom";
 import Home from "../pages/Home";
 import Bestel from "../pages/Bestel";
 import React from "react";
+
 import Portfolio from "../pages/Portfolio";
 import Contact from "../pages/Contact";
-
 
 export default function Router(){
     return (
@@ -12,8 +12,9 @@ export default function Router(){
         <Routes>
             <Route exact path="home" element={<Home></Home>}/>
             <Route exact path="bestel" element={<Bestel></Bestel>}/>
-            <Route exact path="portfolio" element={<Portfolio></Portfolio>}/>
             <Route exact path="contact" element={<Contact></Contact>}/>
+            <Route exact path="portfolio" element={<Portfolio></Portfolio>}/>
+
         </Routes>
 
     )

@@ -1,10 +1,9 @@
 import React from 'react';
+
 import {Link} from "react-router-dom";
 
 export default function NavMenu() {
-
-    return (
-
+     return (
         <>
             <p>
                 <Link to="/home">Home</Link>
@@ -14,9 +13,6 @@ export default function NavMenu() {
             </p>
             <p>
                 <Link to="/contact">Contact</Link>
-            </p>
-            <p>
-                <Link to="/service">Service</Link>
             </p>
             <p>
                 <Link to="/portfolio">portfolio</Link>

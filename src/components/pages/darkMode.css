@@ -1,8 +1,10 @@
-.dark {
+.dark, button:hover {
     background-color: #333;
     color: #fff;
+
 }
-.light {
+.light{
     background-color: #fff;
-    color: #333;}
+    color: #333;
+}
 

@@ -1,8 +1,12 @@
 import React from 'react';
-
-function Footer(props) {
+import "./Pages.css";
+const  Footer = () => {
     return (
-        <div className="footer">FOOTER</div>
+        <div className="footer" >
+            <ul>
+               © 2022 Jordy Coder - Powered by Jda
+            </ul>
+        </div>
     );
 }
 
