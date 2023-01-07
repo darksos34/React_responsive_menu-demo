@@ -19,13 +19,7 @@ export default function NavMenu() {
                 <Link to="/portfolio">portfolio</Link>
             </p>
             <p>
-                <Link to="/addtopic">Add Topic</Link>
-            </p>
-            <p>
                 <Link to="/topiclist">Topiclijst</Link>
-            </p>
-            <p>
-                <Link to="/topics">Topics</Link>
             </p>
 
         </>

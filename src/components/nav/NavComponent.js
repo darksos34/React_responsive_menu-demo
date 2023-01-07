@@ -24,7 +24,6 @@ const NavComponent = () =>  {
         document.body.className = theme;
     }, [theme]);
 
-
     return (
         <div >
             <nav>
@@ -34,28 +33,21 @@ const NavComponent = () =>  {
                         <img src={Logo} alt="sss" srcSet=""></img>
                     </div>
                     <div className="links">
-
                         <div className="links-wrapper">
-
-                            <NavMenu></NavMenu>
+                            <NavMenu/>
                         </div>
-
                         <button  className="links-wrapper-theme" onClick={toggleTheme}><MdDarkMode/></button>
-
                         <div className="nav-menu" >
-
                             {toggleMenu  ? (
                                 <ul>
                                     <RiCloseLine
                                         color="#3333"
                                         size={27}
                                         onClick={() =>  setToggleMenu   (false)}
-
                                     /></ul>
                             ) : (
                                 <ul>
                                     <RiMenu3Line
-
                                         color="#3333"
                                         size={27}
 
@@ -65,19 +57,9 @@ const NavComponent = () =>  {
                             { toggleMenu &&
                                 (
                                     <ul>
-
                                         <div className="nav-menu-wrapper">
                                             <div className="nav-menu-wrapper-links"  onClick={() => setToggleMenu   (false )}>
-                                                <NavMenu      > </NavMenu>
-
-                                                {/*<div className="nav-menu-wrapper-button">*/}
-                                                {/*    <button type="button">*/}
-                                                {/*        <p>*/}
-                                                {/*            <Link to="login">Login</Link>*/}
-                                                {/*        </p>*/}
-
-                                                {/*    </button>*/}
-                                                {/*</div>*/}
+                                                <NavMenu/>
                                             </div>
                                         </div>
                                     </ul>

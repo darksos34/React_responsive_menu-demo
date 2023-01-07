@@ -4,7 +4,8 @@ import Footer from "./Footer";
 
 export default function Home (){
 
-    return (<>
+    return (
+        <>
             <div className="container-login">
                 <div className="card card-container">
                     <div className="header-title">

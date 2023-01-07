@@ -6,7 +6,7 @@ const AddTopic = () => {
         id: null,
         title: '',
         description: '',
-        published: true
+        published: false
     };
     const [topic, setTopic] = useState(initialTopicState);
     const [submitted, setSubmitted] = useState(false);

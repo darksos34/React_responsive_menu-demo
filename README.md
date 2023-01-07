@@ -1,70 +1,349 @@
-# Getting Started with Create React App
+Menu tutorial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dependencies needed:
 
-## Available Scripts
+### package.json
+````
+"axios": "^1.1.2",
+"react": "^18.2.0",
+"react-dom": "^18.2.0",
+"react-icons": "^4.4.0",
+"react-router": "^6.4.2",
+"react-router-dom": "^6.4.2",
+"react-table": "^7.8.0",
+"react-validation": "^3.0.7",
+"validator": "^13.7.0",
+"web-vitals": "^2.1.4"
+````
 
-In the project directory, you can run:
 
-### `npm start`
+### src/components/pages/Home.js
+```
+import React from 'react';
+import './Pages.css';
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+export default function Home (){
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    return (
+         <>
+            <div className="container-login">
+                <div className="card card-container">
+                    <div className="header-title">
+                        <nav>
+                            <h1>Home</h1>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+```
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### src/components/nav/Router.js
+```` 
 
-### `npm run build`
+import {Route, Routes} from "react-router-dom";
+import React from "react";
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+import Home from "../pages/Home";
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+export default function Router(){
+    return (
+        <Routes>
+            <Route exact path="home" element={<Home></Home>}/>
+        </Routes>
+    )
+}
+````
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### index.js
+```
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import {BrowserRouter} from "react-router-dom";
 
-### `npm run eject`
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+root.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+);
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### src/components/nav/NavMenu.js
+````
+import React from 'react';
+import {Link} from "react-router-dom";
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+export default function NavMenu() {
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    return (
+        <>
+            <p>
+                <Link to="/home" onClick={NavMenu}>Home</Link>
+            </p>
+        </>
+    )
 
-## Learn More
+}
+````
+### NavComponent
+````
+import React, {useEffect, useState} from 'react';
+import './NavStyle.css';
+import Logo from '../../assets/logo.png';
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+import {RiCloseLine, RiMenu3Line} from 'react-icons/ri';
+import NavMenu from "./NavMenu";
+import Router from "./Router";
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const NavComponent = () =>  {
+    const [toggleMenu, setToggleMenu] = useState(false);
+    return (
+        <div >
+            <nav>
+                <div className="container">
+                    <div className="links-logo">
+                        <img src={Logo} alt="sss" srcSet=""></img>
+                    </div>
+                    <div className="links">
+                        <div className="links-wrapper">
+                            <NavMenu/>
+                        </div>
+                        <div className="nav-menu" >
+                            {toggleMenu  ? (
+                                <ul>
+                                    <RiCloseLine
+                                        color="#3333"
+                                        size={27}
+                                        onClick={() =>  setToggleMenu   (false)}
+                                    /></ul>
+                            ) : (
+                                <ul>
+                                    <RiMenu3Line
+                                        color="#3333"
+                                        size={27}
 
-### Code Splitting
+                                        onClick={() => setToggleMenu   (true )}
+                                    /></ul>
+                            )}
+                            { toggleMenu &&
+                                (
+                                    <ul>
+                                        <div className="nav-menu-wrapper">
+                                            <div className="nav-menu-wrapper-links"  onClick={() => setToggleMenu   (false )}>
+                                                <NavMenu/>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div>
+                <Router/>
+            </div>
+        </div>
+    );
+}
+export default NavComponent;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+````
 
-### Analyzing the Bundle Size
+Css styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+````
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.5rem 0;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 
-### Making a Progressive Web App
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-### Advanced Configuration
+.links{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+.links-logo{
+    margin-right: 2rem;
+}
 
-### Deployment
+.links-logo img {
+    width: 100px;
+    height: 60px;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+.links-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0;
+}
 
-### `npm run build` fails to minify
+.links-wrapper-theme {
+    width: 45px;
+    height: 45px;
+    margin-right: 150px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+.nav-button:hover {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links-wrapper p a,
+.nav-button p,
+.nav-menu-wrapper{
+    transform: translateY(-7px);
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-menu-wrapper p a {
+    color: white;
+}
+
+.nav-button button,
+.nav-menu-wrapper button {
+    padding: 0.5rem 2rem;
+    color: white;
+    background-color: blue;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-menu {
+    right: 10px;
+    cursor: auto;
+    position: fixed;
+    margin-left: 1rem;
+    display: none;
+}
+
+.nav-menu-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    text-align: end;
+    background-color: rgba(40, 44, 52, 0.67);
+    position: absolute;
+    min-height: 100px;
+    right: 10px;
+    margin-top: 2rem;
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu-wrapper p a {
+    margin: 1rem 0;
+    text-decoration: none;
+}
+.nav-menu-wrapper-button {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .links-wrapper {
+        display: none;
+    }
+    .nav-menu {
+        margin-left: auto;
+
+        display: flex;
+    }
+    .nav-menu-wrapper{
+        align-content: center;
+        width: min-content;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width:  700px) {
+    .container {
+        padding: 1rem 2rem;
+    }
+    .nav-menu-wrapper{
+        align-items: center;
+        width: min-content;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width:  550px) {
+    .container {
+        padding: 1rem 2rem;
+    }
+    .nav-button {
+        display: none;
+    }
+    .nav-menu-wrapper {
+        top: 20px;
+        height: auto;
+    }
+    .nav-menu-wrapper-button {
+        display: block;
+    }
+}
+
+````
+
+## NEXT GOALS
+1. Finish Card component without bootstrap
+2. Add button styles as your own libary
+3. Connect Backend with frontend. (Choose host)

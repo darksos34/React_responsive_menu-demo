@@ -27,8 +27,44 @@
     background: #080a0a;
 }
 
-.topic-list-style{
+.topic-list-search{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    padding-top: 20px;
+}
+.topic-list-add{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+
+.card__container {
+    margin: 2rem 2rem 2rem 0;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 0 28px 4px rgba(0,0,0,0.1);
+    transition: transform .3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+
+}
+
+.card__title {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.card__image {
+    display: flex;
+    justify-content: flex-end;
+    max-width: border-box;
+    width: 60%;
+    border-radius: 5px;
 }
