@@ -5,13 +5,14 @@ import Logo from '../../assets/logo.png';
 import {RiCloseLine, RiMenu3Line} from 'react-icons/ri';
 import NavMenu from "./NavMenu";
 import Router from "./Router";
-import Footer from "../pages/Footer";
 
+import { MdDarkMode } from 'react-icons/md';
 
 const NavComponent = () =>  {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     const [theme, setTheme] = useState('light');
+
     const toggleTheme = () => {
         if (theme === 'light') {
             setTheme('dark');
@@ -24,9 +25,8 @@ const NavComponent = () =>  {
     }, [theme]);
 
 
-
     return (
-        <div>
+        <div >
             <nav>
 
                 <div className="container">
@@ -37,12 +37,12 @@ const NavComponent = () =>  {
 
                         <div className="links-wrapper">
 
-                            <NavMenu/>
+                            <NavMenu></NavMenu>
                         </div>
 
-                        <button className="links-wrapper-theme" onClick={toggleTheme}>THEME MODUS</button>
+                        <button  className="links-wrapper-theme" onClick={toggleTheme}><MdDarkMode/></button>
 
-                        <div className="nav-menu">
+                        <div className="nav-menu" >
 
                             {toggleMenu  ? (
                                 <ul>
@@ -55,9 +55,11 @@ const NavComponent = () =>  {
                             ) : (
                                 <ul>
                                     <RiMenu3Line
+
                                         color="#3333"
                                         size={27}
-                                        onClick={() => setToggleMenu    (true )}
+
+                                        onClick={() => setToggleMenu   (true )}
                                     /></ul>
                             )}
                             { toggleMenu &&
@@ -65,8 +67,9 @@ const NavComponent = () =>  {
                                     <ul>
 
                                         <div className="nav-menu-wrapper">
-                                            <div className="nav-menu-wrapper-links">
-                                                <NavMenu/>
+                                            <div className="nav-menu-wrapper-links"  onClick={() => setToggleMenu   (false )}>
+                                                <NavMenu      > </NavMenu>
+
                                                 {/*<div className="nav-menu-wrapper-button">*/}
                                                 {/*    <button type="button">*/}
                                                 {/*        <p>*/}
@@ -85,9 +88,8 @@ const NavComponent = () =>  {
                 </div>
             </nav>
             <div>
-
                 <Router/>
-            </div>  <Footer/>
+            </div>
         </div>
     );
 }

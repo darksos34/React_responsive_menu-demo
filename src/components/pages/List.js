@@ -1,19 +1,20 @@
-import React from 'react';
-import './Pages.css';
-import Footer from "./Footer";
+import React from "react";
 
-export default function Portfolio (){
+import AddTopic from "../storys/AddTopics";
+
+export default function List (){
 
     return (
         <>
             <div className="container-login">
                 <div className="header-title">
                     <nav>
-                        <h1>Portfolio</h1>
+                        <h1>Topics</h1>
                     </nav>
+                    <AddTopic/>
                 </div>
+
             </div>
-            <Footer/>
         </>
     )
 }

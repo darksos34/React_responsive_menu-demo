@@ -1,1 +1,0 @@
-[Hide menu - URL Stackoverflow](https://stackoverflow.com/questions/72266387/is-there-any-other-way-to-hide-dropdown-menu-when-clicked-outside)
