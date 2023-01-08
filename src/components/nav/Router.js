@@ -8,6 +8,7 @@ import Contact from "../pages/Contact";
 
 import TopicList from "../pages/TopicList";
 import Topic from "../storys/Topic";
+import SubNav from "./subnav/main/SubNav";
 
 export default function Router(){
     console.log(Topic)
@@ -19,6 +20,7 @@ export default function Router(){
             <Route exact path="contact" element={<Contact></Contact>}/>
             <Route exact path="portfolio" element={<Portfolio></Portfolio>}/>
             <Route path="topiclist" element={<TopicList></TopicList>}/>
+            <Route path="submenu" element={<SubNav></SubNav>}/>
         </Routes>
 
     )

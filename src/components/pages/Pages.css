@@ -41,13 +41,18 @@
 
 
 .card__container {
-    margin: 2rem 2rem 2rem 0;
-    padding: 1.5rem;
     width: 250px;
-    box-shadow: 0 0 28px 4px rgba(0,0,0,0.1);
     transition: transform .3s ease;
     cursor: pointer;
-    border-radius: 5px;
+    background-color: #f7f7f7;
+    padding: 25px 30px 40px;
+    margin: auto;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -67,4 +72,17 @@
     max-width: border-box;
     width: 60%;
     border-radius: 5px;
+}
+.footer-down{
+    bottom:0;
+    position: relative;
+width: 100%;
+}
+.footer-topic{
+flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 1000px;
+    bottom: 0;
+
 }

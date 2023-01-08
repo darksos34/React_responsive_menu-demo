@@ -7,6 +7,8 @@ import NavMenu from "./NavMenu";
 import Router from "./Router";
 
 import { MdDarkMode } from 'react-icons/md';
+import SubNav from "./subnav/main/SubNav";
+
 
 const NavComponent = () =>  {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -37,6 +39,7 @@ const NavComponent = () =>  {
                             <NavMenu/>
                         </div>
                         <button  className="links-wrapper-theme" onClick={toggleTheme}><MdDarkMode/></button>
+                        <SubNav/>
                         <div className="nav-menu" >
                             {toggleMenu  ? (
                                 <ul>

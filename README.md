@@ -1,4 +1,4 @@
-Menu tutorial
+SubMenu tutorial
 
 Dependencies needed:
 

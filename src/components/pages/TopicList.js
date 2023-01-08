@@ -1,6 +1,7 @@
 import TopicsList from "../storys/TopicsList";
 import React from "react";
 import AddTopic from "../storys/AddTopics";
+import Footer from "./Footer";
 
 export default function TopicList () {
 
@@ -12,6 +13,10 @@ export default function TopicList () {
             <div className="topic-list-search">
                 <TopicsList/>
             </div>
+            <div className="footer-topic">
+
+            </div>
+            <Footer/>
         </>
     )
 }
