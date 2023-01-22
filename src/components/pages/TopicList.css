@@ -1,0 +1,11 @@
+.topic-list-search{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.topic-list-add{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}

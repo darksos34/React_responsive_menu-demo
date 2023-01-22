@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import './NavStyle.css';
 import Logo from '../../assets/logo.png';
 
-import {RiCloseLine, RiMenu3Line} from 'react-icons/ri';
 import NavMenu from "./NavMenu";
 import Router from "./Router";
 
 import { MdDarkMode } from 'react-icons/md';
-import SubNav from "./subnav/main/SubNav";
+import SubNav from "./hamburgerMenu/main/SubNav";
+import NavIconMenu from "./NavIconMenu";
 
 
 const NavComponent = () =>  {
@@ -39,18 +39,17 @@ const NavComponent = () =>  {
                             <NavMenu/>
                         </div>
                         <button  className="links-wrapper-theme" onClick={toggleTheme}><MdDarkMode/></button>
-                        <SubNav/>
                         <div className="nav-menu" >
                             {toggleMenu  ? (
                                 <ul>
-                                    <RiCloseLine
+                                    <SubNav
                                         color="#3333"
                                         size={27}
                                         onClick={() =>  setToggleMenu   (false)}
                                     /></ul>
                             ) : (
                                 <ul>
-                                    <RiMenu3Line
+                                    <SubNav
                                         color="#3333"
                                         size={27}
 
@@ -62,7 +61,7 @@ const NavComponent = () =>  {
                                     <ul>
                                         <div className="nav-menu-wrapper">
                                             <div className="nav-menu-wrapper-links"  onClick={() => setToggleMenu   (false )}>
-                                                <NavMenu/>
+                                                <NavIconMenu/>
                                             </div>
                                         </div>
                                     </ul>

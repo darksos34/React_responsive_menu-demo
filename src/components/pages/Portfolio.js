@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pages.css';
+import './Main.css';
 import Footer from "./Footer";
 import Card from "./Card";
 

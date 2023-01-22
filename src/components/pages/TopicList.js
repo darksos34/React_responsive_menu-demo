@@ -2,6 +2,7 @@ import TopicsList from "../storys/TopicsList";
 import React from "react";
 import AddTopic from "../storys/AddTopics";
 import Footer from "./Footer";
+import "./TopicList.css";
 
 export default function TopicList () {
 

@@ -35,10 +35,10 @@ const StyledMenu = styled.div`
   ::-webkit-scrollbar{width:6px;border-left:1px solid #E6ECF8;}
   ::-webkit-scrollbar-thumb{background-color:#d6872c;}
 
-  @media screen and (min-width: 790px) {
+  @media screen and (min-width: 1050px) {
     width: 60%;
   }
-  background-color: rgba(192, 204, 231, 0.9);
+  background-color: rgba(12, 1, 1, 0.9);
   z-index: 99;
 
   display: flex;
@@ -62,8 +62,8 @@ const StyledLink = styled(Link)`
   -ms-user-select: none; /* Internet Explorer/Edge */
 
   &:hover {
-    transition: .2s all ease-in-out;
-    color: orangered;
+    transition: 0.15s all ease-in-out;
+    color: black;
   }
 `;
 

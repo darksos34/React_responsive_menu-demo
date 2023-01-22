@@ -7,22 +7,20 @@ export default function NavMenu() {
     return (
         <>
             <p>
-                <Link to="/home" onClick={NavMenu}>Home</Link>
+                <Link className="nav-menu-hoover" to="/home" onClick={NavMenu}>Home</Link>
             </p>
             <p>
-                <Link to="/expert">Expert</Link>
+                <Link className="nav-menu-hoover" to="/expert">Expert</Link>
             </p>
             <p>
-                <Link to="/contact">Contact</Link>
+                <Link className="nav-menu-hoover" to="/contact">Contact</Link>
             </p>
             <p>
-                <Link to="/portfolio">portfolio</Link>
+                <Link className="nav-menu-hoover" to="/portfolio">portfolio</Link>
             </p>
             <p>
-                <Link to="/topiclist">Topiclijst</Link>
+                <Link className="nav-menu-hoover" to="/topiclist">Topiclijst</Link>
             </p>
-
         </>
     )
-
 }
