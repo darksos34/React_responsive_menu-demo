@@ -8,7 +8,7 @@ import Contact from "../pages/Contact";
 
 import TopicList from "../pages/TopicList";
 import Topic from "../storys/Topic";
-import SubNav from "./subnav/main/SubNav";
+import SubNav from "./hamburgerMenu/main/SubNav";
 
 export default function Router(){
     console.log(Topic)
