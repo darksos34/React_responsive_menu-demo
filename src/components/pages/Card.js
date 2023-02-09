@@ -1,17 +1,35 @@
-import React from 'react';
-import './../pages/Card.css';
+import React, { useState, useEffect } from 'react';
+import './Card.css';
 
-function Card(props) {
+const Card = (props) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    useEffect(() => {
+        const handleClick = () => {
+            setIsExpanded(false);
+        }
+        document.addEventListener("mousedown", handleClick);
+        return () => {
+            document.removeEventListener("mousedown", handleClick);
+        };
+    }, [isExpanded]);
+
     return (
-        <div className="card__container">
-            <div className="card__body">
-                <img className="card__image" src={props.img}  alt="404 Not found"/>
-                <h2 className="card__title" >Home sweet</h2>
-                <p className="card__description">{props.description}</p>
+        <div
+            className={`card ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setIsExpanded(!isExpanded)}
+        >
+            <div className="card__container">
+                <div className="card__body">
+                    <img className="card__image" src={props.img}  alt="404 Not found"/>
+                    <h2 className="card__title" >Home sweet</h2>
+                    <p className="card__description">{props.description}</p>
+                </div>
+                <button className="card__btn">Add picture</button>
             </div>
-            <button className="card__btn">Add picture</button>
         </div>
     );
-}
+};
 
 export default Card;
+

@@ -1,8 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {Link} from "react-router-dom";
+import {MdDarkMode} from "react-icons/md";
 
 export default function NavMenu() {
+    const [theme, setTheme] = useState('light');
+
+    const toggleTheme = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    };
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
 
     return (
         <>
@@ -20,6 +33,9 @@ export default function NavMenu() {
             </p>
             <p>
                 <Link className="nav-menu-hoover" to="/topiclist">Topiclijst</Link>
+            </p>
+            <p>
+              <button  className="links-wrapper-theme" onClick={toggleTheme}><MdDarkMode/></button>
             </p>
         </>
     )

@@ -2,7 +2,6 @@ import React from "react";
 
 import AddTopic from "../storys/AddTopics";
 
-
 export default function List (){
 
     return (
@@ -14,7 +13,6 @@ export default function List (){
                     </nav>
                     <AddTopic/>
                 </div>
-
             </div>
         </>
     )

@@ -1,10 +1,10 @@
 .dark, button:hover {
     background-color: #333;
     color: #ffffff;
-
 }
 
 .light{
     background-color: #fff;
     color: #333;
+    position: center;
 }

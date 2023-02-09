@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState} from 'react';
 
 import './../../../../App.css';
 
 import SubMenu from "../menu/SubMenu";
 import Toggle from "../menu/Toggle";
-
 
 const SubNav = () => {
     const [navToggled, setNavToggled] = useState(false);

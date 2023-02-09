@@ -346,4 +346,7 @@ body {
 ## NEXT GOALS
 1. Finish Card component without bootstrap
 2. Add button styles as your own libary
+3. Add background images
+4. Make a list of Portfolio
+5. VPS
 3. Connect Backend with frontend. (Choose host)

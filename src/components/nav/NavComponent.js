@@ -1,18 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import './NavStyle.css';
 import Logo from '../../assets/logo.png';
-
 import NavMenu from "./NavMenu";
 import Router from "./Router";
-
-import { MdDarkMode } from 'react-icons/md';
 import SubNav from "./hamburgerMenu/main/SubNav";
 import NavIconMenu from "./NavIconMenu";
-
+import {MdDarkMode} from "react-icons/md";
+import {Link} from "react-router-dom";
 
 const NavComponent = () =>  {
     const [toggleMenu, setToggleMenu] = useState(false);
-
     const [theme, setTheme] = useState('light');
 
     const toggleTheme = () => {
@@ -31,14 +28,16 @@ const NavComponent = () =>  {
             <nav>
 
                 <div className="container">
+
                     <div className="links-logo">
-                        <img src={Logo} alt="sss" srcSet=""></img>
+                        <Link to="/home">
+                        <button className="links-wrapper">
+                   <img src={Logo} alt="sss" srcSet=""></img></button></Link>
                     </div>
                     <div className="links">
                         <div className="links-wrapper">
                             <NavMenu/>
                         </div>
-                        <button  className="links-wrapper-theme" onClick={toggleTheme}><MdDarkMode/></button>
                         <div className="nav-menu" >
                             {toggleMenu  ? (
                                 <ul>
@@ -46,15 +45,14 @@ const NavComponent = () =>  {
                                         color="#3333"
                                         size={27}
                                         onClick={() =>  setToggleMenu   (false)}
-                                    /></ul>
+                                    />    <button  className="links-wrapper-theme" onClick={toggleTheme}><MdDarkMode/></button></ul>
                             ) : (
                                 <ul>
                                     <SubNav
                                         color="#3333"
                                         size={27}
-
                                         onClick={() => setToggleMenu   (true )}
-                                    /></ul>
+                                    />           <button  className="links-wrapper-theme" onClick={toggleTheme}><MdDarkMode/></button></ul>
                             )}
                             { toggleMenu &&
                                 (
