@@ -4,7 +4,8 @@ import Footer from "./Footer";
 import Card from "./Card";
 import "./Home.css";
 
-export default function Home (props){
+//TODO Remove all TEST DATA and only add 1 card component WIDE.
+export default function Home (){
 
     return (
         <>
@@ -16,24 +17,37 @@ export default function Home (props){
                     </nav>
                 </div>
             </div>
+
             <div className="container-login">
                 <div className="card card-container">
                     <div className="header-title">
                         <nav>
-                            <Card description={props.description}/>
+                            <Card   img="https://t3.ftcdn.net/jpg/02/85/92/64/360_F_285926473_L4IqNJhss4ym9WOYUQYN0TCecpFDFerR.jpg" title="Coding"  description="Dit is een test card"/>
                         </nav>
                     </div>
                 </div>
             </div>
+
             <div className="container-login">
                 <div className="card card-container">
                     <div className="header-title">
                         <nav>
-                            <Card   img="https://www.moneyunder30.com/wp-content/uploads/2021/10/shutterstock_1489795766.jpg" title="Homesweet"  description="Dit is een test card"/>
+                            <Card   img="https://t3.ftcdn.net/jpg/02/85/92/64/360_F_285926473_L4IqNJhss4ym9WOYUQYN0TCecpFDFerR.jpg" title="Coding"  description="Dit is een test card"/>
                         </nav>
                     </div>
                 </div>
             </div>
+
+            <div className="container-login">
+                <div className="card card-container">
+                    <div className="header-title">
+                        <nav>
+                            <Card   img="https://t3.ftcdn.net/jpg/02/85/92/64/360_F_285926473_L4IqNJhss4ym9WOYUQYN0TCecpFDFerR.jpg" title="Coding"  description="Dit is een test card"/>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <br></br>
             <div className="footer-down">
                 <Footer/>
             </div>

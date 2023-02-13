@@ -9,7 +9,7 @@ const SubMenu = ({handleNavToggle}) => {
         <>
             <StyledMenu>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle}
-                            to="/home">Home</StyledLink>
+                            to="/">Home</StyledLink>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle}
                             to="/expert">Expert</StyledLink>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle}

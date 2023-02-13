@@ -8,6 +8,7 @@ import NavIconMenu from "./NavIconMenu";
 import {MdDarkMode} from "react-icons/md";
 import {Link} from "react-router-dom";
 
+//TODO Remove all TEST DATA and only add 1 card component WIDE.
 const NavComponent = () =>  {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [theme, setTheme] = useState('light');
@@ -28,15 +29,15 @@ const NavComponent = () =>  {
             <nav>
 
                 <div className="container">
-
                     <div className="links-logo">
-                        <Link to="/home">
-                        <button className="links-wrapper">
-                   <img src={Logo} alt="sss" srcSet=""></img></button></Link>
+                        <button className="links-logo-button">
+                            <Link to="/">
+                                <img src={Logo} alt="sss" srcSet=""></img></Link></button>
                     </div>
                     <div className="links">
                         <div className="links-wrapper">
                             <NavMenu/>
+
                         </div>
                         <div className="nav-menu" >
                             {toggleMenu  ? (

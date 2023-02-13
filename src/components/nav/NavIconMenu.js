@@ -14,7 +14,7 @@ export default function NavIconMenu() {
     return (
         <>
             <p>
-                <Link to="/home" onClick={NavIconMenu}><FaHome /> Home</Link>
+                <Link to="/" onClick={NavIconMenu}><FaHome /> Home</Link>
             </p>
             <p>
                 <Link to="/expert"><FaBuromobelexperte /> Expert</Link>
