@@ -8,48 +8,47 @@
   {
     "id":2,
     "name":"Nikita",
-    "city":"Lucknow"
+    "description":"Lucknow"
   },
 
   {
     "id":3,
     "name":"Deeksha",
-    "city":"Noida"
+    "description":"Noida"
   },
 
   {
     "id":4,
     "name":"Ritesh",
-    "city":"Delhi"
+    "description":"Delhi"
   },
 
   {
     "id":5,
     "name":"Somya",
-    "city":"Gurugram"
+    "description":"Gurugram"
   },
 
   {
     "id":6,
     "name":"Eshika",
-    "city":"Mumbai"
+    "description":"Mumbai"
   },
   {
     "id":7,
     "name":"Kalpana",
-    "city":"Rampur"
+    "description":"Rampur"
   },
 
   {
     "id":8,
     "name":"Parul",
-    "city":"Chandigarh"
+    "description":"Chandigarh"
   },
 
   {
     "id":9,
     "name":"Himani",
-    "city":"Dehradun",
-    "descriptrion": "Dit is een test card"
+    "description":"Dehradun"
   }
 ]
