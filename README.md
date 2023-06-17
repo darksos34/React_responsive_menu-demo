@@ -1,5 +1,8 @@
 SubMenu tutorial
 
+Version log.
+0.1.0 - Add Email Contact form basic
+0.1.1 - commit all branches to github
 Dependencies needed:
 
 ### package.json
