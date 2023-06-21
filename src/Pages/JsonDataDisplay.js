@@ -1,5 +1,5 @@
 import React from 'react'
-import JsonData from './../../data.json'
+import JsonData from '../data.json'
 
 export default function JsonDataDisplay(){
     const DisplayData=JsonData.map(

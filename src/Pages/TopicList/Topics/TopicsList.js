@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import TopicService from "../services/TopicService";
+import TopicService from "../../../Services/TopicService";
 import { Link } from "react-router-dom";
 
 const TopicsList = () => {
