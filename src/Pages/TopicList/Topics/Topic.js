@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-import TopicDataService from "../services/TopicService";
+import TopicDataService from "../../../Services/TopicService";
 
 const Topic = (props) => {
     const initialTopicState = {

@@ -2,9 +2,16 @@ version: "3.8"
 
 services:
   app:
-    container_name: docker-react-c
-    image: website_jda_frontend
+    container_name: react_responsive_menu-demo
     build:
       context: .
+      dockerfile: Dockerfile
+    volumes:
+        - './:/app'
+        - '/app/node_modules'
     ports:
-     - "8080:80"
+     - 3000:3000
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start

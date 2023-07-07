@@ -1,10 +1,10 @@
-import TopicsList from "../storys/TopicsList";
+import TopicsList from "./Topics/TopicsList";
 import React from "react";
-import AddTopic from "../storys/AddTopics";
-import Footer from "./Footer";
+import AddTopic from "./Topics/AddTopics";
+import Footer from "../Footer/Footer";
 import "./TopicList.css";
 
-export default function TopicList () {
+export default function TopicListNav () {
 
     return (
         <>

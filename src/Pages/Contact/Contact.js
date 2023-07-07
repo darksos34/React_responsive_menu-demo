@@ -1,7 +1,7 @@
 import React from 'react';
-import './Main.css';
-import Card from "./Card";
-import Footer from "./Footer";
+import '../../Style/Main.css';
+import Card from "../../Components/Card/Card";
+import Footer from "../Footer/Footer";
 
 export default function Contact (){
 

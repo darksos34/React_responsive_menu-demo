@@ -1,6 +1,6 @@
 import React from "react";
 
-import AddTopic from "../storys/AddTopics";
+import AddTopic from "./Topics/AddTopics";
 
 export default function List (){
 

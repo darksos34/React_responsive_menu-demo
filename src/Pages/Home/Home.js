@@ -1,7 +1,7 @@
 import React from 'react';
-import './Main.css';
-import Footer from "./Footer";
-import Card from "./Card";
+import '../../Style/Main.css';
+import Footer from "../Footer/Footer";
+import Card from "../../Components/Card/Card";
 import "./Home.css";
 
 //TODO Remove all TEST DATA and only add 1 card component WIDE.
