@@ -9,7 +9,7 @@ const SubMenu = ({handleNavToggle}) => {
         <>
             <StyledMenu>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle}
-                            to="/">Home</StyledLink>
+                            to="/">Blog</StyledLink>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle}
                             to="/expert">Expert</StyledLink>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle}
@@ -57,7 +57,7 @@ const StyledLink = styled(Link)`
 
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
+  //-khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
 
