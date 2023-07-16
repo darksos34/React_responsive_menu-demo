@@ -69,7 +69,7 @@ const StyledLink = styled(Link)`
 
 const CloseToggle = styled.button`
   position: fixed;
-  top: 3%;
+  top: 5%;
   right: 10%;
   color: #999;
   border-radius: 2rem;
