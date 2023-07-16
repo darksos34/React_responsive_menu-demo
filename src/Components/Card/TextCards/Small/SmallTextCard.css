@@ -1,0 +1,42 @@
+.stxcard__container {
+    width: auto;
+    transition: transform .3s ease;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    padding: 25px 50px 30px;
+    margin: auto;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
+}
+.stxcard:hover {
+    transform: scale(1.1);
+}
+
+.stxcard__title {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.stxcard {
+    overflow: revert;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+.stxcard.expanded {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+}
+
+.stxcard-content {
+    padding: 10px;
+}
