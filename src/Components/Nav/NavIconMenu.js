@@ -20,15 +20,14 @@ export default function NavIconMenu() {
                 <Link to="/expert"><FaBuromobelexperte /> Expert</Link>
             </p>
             <p>
-                <Link to="/contact"><FaMedapps />Contact</Link>
-            </p>
-            <p>
                 <Link to="/portfolio"><FaReadme />  portfolio</Link>
             </p>
             <p>
                 <Link to="/topiclist"><FaDatabase /> Topiclijst</Link>
             </p>
-
+            <p>
+                <Link to="/contact"><FaMedapps />Contact</Link>
+            </p>
         </>
     );
 }

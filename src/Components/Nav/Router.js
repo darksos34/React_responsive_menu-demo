@@ -17,9 +17,9 @@ export default function Router(){
         <Routes>
             <Route exact path="/" element={<Blog></Blog>}/>
             <Route exact path="expert" element={<Expert></Expert>}/>
-            <Route exact path="contact" element={<Contact></Contact>}/>
             <Route exact path="portfolio" element={<Portfolio></Portfolio>}/>
             <Route path="topiclist" element={<TopicListNav></TopicListNav>}/>
+            <Route exact path="contact" element={<Contact></Contact>}/>
             <Route path="submenu" element={<SubNav></SubNav>}/>
         </Routes>
 

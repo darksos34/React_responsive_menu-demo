@@ -18,13 +18,11 @@ export default function Blog (){
             </div>
 
             <div className="container-login">
-                <div className="card card-container">
+
                     <div className="header-title">
                         <nav>
-                            <BigTextCard title="test" description="Dit is een test card" text="test">
-                            </BigTextCard>
+                            <BigTextCard title="test" description="Dit is een test card" text="test"/>
                         </nav>
-                    </div>
                 </div>
             </div>
 

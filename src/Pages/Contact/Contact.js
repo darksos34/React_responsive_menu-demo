@@ -14,6 +14,7 @@ export default function Contact (){
                     </nav>
                 </div>
             </div>
+            {/*//TODO Foutje als je een kaart hebt aangeklikt dan blijft die voor het menu staan*/}
             <div className="container-login">
                 {/*<div className="card card-container">*/}
                 <div className="header-title">

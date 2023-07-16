@@ -1,54 +1,8 @@
 [
   {
-    "id": 1,
-    "title": "Build a responsive Hamburger menu",
-    "description": "Using ReactJs & Style component + Css"
-  },
 
-  {
-    "id":2,
-    "name":"Nikita",
-    "description":"Lucknow"
-  },
-
-  {
-    "id":3,
-    "name":"Deeksha",
-    "description":"Noida"
-  },
-
-  {
-    "id":4,
-    "name":"Ritesh",
-    "description":"Delhi"
-  },
-
-  {
-    "id":5,
-    "name":"Somya",
-    "description":"Gurugram"
-  },
-
-  {
-    "id":6,
-    "name":"Eshika",
-    "description":"Mumbai"
-  },
-  {
-    "id":7,
-    "name":"Kalpana",
-    "description":"Rampur"
-  },
-
-  {
-    "id":8,
-    "name":"Parul",
-    "description":"Chandigarh"
-  },
-
-  {
-    "id":9,
-    "name":"Himani",
-    "description":"Dehradun"
+    "text": "Build a responsive Hamburger menu",
+    "description": "Using ReactJs & Style component + Css, with"
   }
+
 ]
