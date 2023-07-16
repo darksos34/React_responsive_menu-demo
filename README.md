@@ -6,7 +6,7 @@ SubMenu tutorial
 * 0.1.2 - Fix commit 
 * 0.1.3 - Setup Dockercompose & Dockerfile with configuration
 * 0.1.4 - Clean up folder & file structure 1e step
-
+* 0.1.5 - Add new card component, Change home page to Blog, gitignore, fix style general
 Dependencies needed:
 
 ### package.json
@@ -24,7 +24,7 @@ Dependencies needed:
 ````
 
 
-### src/components/pages/Home.js
+### src/components/pages/Blog.js
 ```
 import React from 'react';
 import './Pages.css';
@@ -351,7 +351,7 @@ body {
 ````
 
 ## NEXT GOALS
-1. Finish Card component without bootstrap
+1. Finish SCard component without bootstrap
 2. Add button styles as your own libary
 3. Add background images
 4. Make a list of Portfolio

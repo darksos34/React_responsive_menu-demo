@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const HomeSet = () => {
     return (
         <StyledHomeSet>
-            <Heading className="animate__animated animate__fadeInLeft">Home Page</Heading>
+            <Heading className="animate__animated animate__fadeInLeft">Blog Page</Heading>
         </StyledHomeSet>
     )
 }
@@ -29,7 +29,7 @@ const Heading = styled.h1`
 
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
+  //-khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
 `;

@@ -20,7 +20,7 @@ export default function NavMenu() {
     return (
         <>
             <p>
-                <Link className="nav-menu-hoover" to="/" onClick={NavMenu}>Home</Link>
+                <Link className="nav-menu-hoover" to="/" onClick={NavMenu}>Blog</Link>
             </p>
             <p>
                 <Link className="nav-menu-hoover" to="/expert">Expert</Link>
