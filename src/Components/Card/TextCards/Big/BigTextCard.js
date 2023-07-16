@@ -36,10 +36,8 @@ const BigTextCard = (props) => {
                     <h2 className="btxcard__title" >{props.title}</h2>
                     <p className="btxcard__description">{props.description}</p>
                 </div>
-
-                <h4 className={"btxcard__text"}>{props.description}
-                    {DisplayData} {DisplayData} {DisplayData}
-                    Wat ben jij aan het doen vandaag een lekker studddddddddddsssssssssssssssskje codeeren    d d dddddddddsssssssss d dddddddddddddddddddddddddddddddd
+                <h4 className={"btxcard__text"}>{props.text}
+                    {DisplayData}
                 </h4>
 
             </div>

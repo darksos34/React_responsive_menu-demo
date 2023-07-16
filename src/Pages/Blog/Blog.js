@@ -21,7 +21,7 @@ export default function Blog (){
 
                     <div className="header-title">
                         <nav>
-                            <BigTextCard title="test" description="Dit is een test card" text="test"/>
+                            <BigTextCard title="React Card component" description="Generic Card" text="How to build a generic React component"/>
                         </nav>
                 </div>
             </div>
