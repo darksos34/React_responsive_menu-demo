@@ -25,6 +25,7 @@
 
 .card__image {
     display: flex;
+    /*Image zorgt voor problemen met Hamburger menu*/
     justify-content: flex-end;
     max-height: 100px;
     border-radius: 10px;
@@ -54,3 +55,69 @@
 .card-content {
     padding: 10px;
 }
+@media screen and (max-width: 1050px) {
+    .btxcard{
+        padding: 3rem 2rem;
+    }
+    .links-wrapper {
+        display: none;
+
+    }
+    .nav-menu {
+        margin-left: auto;
+
+        display: flex;
+    }
+    .nav-menu-wrapper {
+        align-content: center;
+        width: min-content;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width:  700px) {
+    .btxcard {
+        padding: 1rem 2rem;
+    }
+    .nav-menu-wrapper{
+
+        align-items: center;
+        width: min-content;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width:  550px) {
+    .btxcard {
+        padding: 3rem 2rem;
+
+    }
+    .nav-button {
+        display: none;
+    }
+    .nav-menu-wrapper {
+
+        height: auto;
+    }
+    .nav-menu-wrapper-button {
+        display: block;
+    }
+}
+@media screen and (max-width:  400px) {
+    .btxcard {
+        padding: 4rem 2rem;
+
+    }
+
+    .nav-button {
+        display: none;
+    }
+    .nav-menu-wrapper {
+
+        height: auto;
+    }
+    .nav-menu-wrapper-button {
+        display: block;
+    }
+}
+

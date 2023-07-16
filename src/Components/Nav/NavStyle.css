@@ -63,10 +63,13 @@
 
 .links-wrapper-theme {
     margin-top: auto;
-    margin-left: 10px;
+    margin-left: auto;
     width: 40px;
+    position: fixed;
+    top:5%;
+    right: 10%;
     height: 40px;
-    margin-right: 150px;
+    margin-right: 100px;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
     text-transform: uppercase;
@@ -84,13 +87,16 @@
 
 .nav-button:hover {
     display: flex;
+    max-width: 10px;
     justify-content: flex-end;
     align-items: center;
 }
 
 .nav-menu-hoover:hover{
     color: #080a0a;
-    border-radius: 5px;
+    padding-block: 15px;
+    padding-block-start: 5px;
+    border-radius: 15px;
     background: #8fbbce;
 }
 
@@ -104,7 +110,6 @@
     font-size: 22px;
     font-family: "Calibri Light", sans-serif;
     line-height: 30px;
-
     text-transform: capitalize;
     margin: 0 1rem;
     cursor: pointer;
@@ -131,7 +136,6 @@ body {
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
-
     border-radius: 5px;
     border: none;
     outline: none;
@@ -173,14 +177,14 @@ body {
 @media screen and (max-width: 1050px) {
     .container{
         padding: 3rem 2rem;
+        justify-content: center;
     }
     .links-wrapper {
         display: none;
 
     }
     .nav-menu {
-        margin-left: auto;
-
+        right: initial;
         display: flex;
     }
     .nav-menu-wrapper {
@@ -193,6 +197,7 @@ body {
 @media screen and (max-width:  700px) {
     .container {
         padding: 1rem 2rem;
+        justify-content: center;
     }
     .nav-menu-wrapper{
 
@@ -204,14 +209,14 @@ body {
 
 @media screen and (max-width:  550px) {
     .container {
+        justify-content: center;
         padding: 3rem 2rem;
-
     }
     .nav-button {
         display: none;
+        justify-items: auto;
     }
     .nav-menu-wrapper {
-
         height: auto;
     }
     .nav-menu-wrapper-button {

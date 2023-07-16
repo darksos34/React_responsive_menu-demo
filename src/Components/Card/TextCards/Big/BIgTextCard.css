@@ -5,6 +5,7 @@
     background-color: #f7f7f7;
     padding: 25px 50px 30px;
     margin: auto;
+
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 10px;
@@ -47,6 +48,7 @@
 .btxcard-content {
     justify-content: space-around;
 }
+
 @media screen and (max-width: 1050px) {
     .btxcard{
         padding: 3rem 2rem;
@@ -95,3 +97,22 @@
         display: block;
     }
 }
+
+@media screen and (max-width:  400px) {
+    .btxcard {
+        padding: 4rem 2rem;
+
+    }
+
+    .nav-button {
+        display: none;
+    }
+    .nav-menu-wrapper {
+
+        height: auto;
+    }
+    .nav-menu-wrapper-button {
+        display: block;
+    }
+}
+
