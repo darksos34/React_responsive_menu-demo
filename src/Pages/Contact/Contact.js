@@ -2,6 +2,8 @@ import React from 'react';
 import '../../Style/Main.css';
 import SCard from "../../Components/Card/ImageCards/Small/Card";
 import Footer from "../Footer/Footer";
+import LogoInstagram from '../../assets/logo-instagram.png';
+import LogoTwitter from '../../assets/logo-twitter.png';
 
 export default function Contact (){
 
@@ -13,6 +15,14 @@ export default function Contact (){
                         <h1>Contact</h1>
                     </nav>
                 </div>
+            </div>
+            <div className="conatainer-social">
+                <div className="links-instagram">
+                    <a href="https://www.instagram.com/jordy_model"><img src={LogoInstagram} alt="notfound" srcSet=""></img></a> </div>
+            </div>
+            <div className="conatainer-social">
+                <div className="links-twitter">
+                    <a href="https://twitter.com/Unique_Jordy"><img src={LogoTwitter} alt="notfound" srcSet=""></img></a> </div>
             </div>
             {/*//TODO Foutje als je een kaart hebt aangeklikt dan blijft die voor het menu staan*/}
             <div className="container-login">
