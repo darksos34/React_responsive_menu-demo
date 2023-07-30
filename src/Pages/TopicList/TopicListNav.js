@@ -2,16 +2,17 @@ import TopicsList from "./Topics/TopicsList";
 import React, {useState} from "react";
 import Footer from "../Footer/Footer";
 import "./TopicList.css";
-import AuthComponent from "../Auth/AuthComponent";
 import './../Auth/AuthComponent.css';
+import AuthComponent from "../Auth/AuthComponent";
+
 export default function TopicListNav () {
     const [loggedIn, setLoggedIn] = useState(false);
     const [showAuth, setShowAuth] = useState(false);
-    const [isLogin, setIsLogin] = useState(false);
+    const [showLogin, setShowLogin] = useState(true);
 
     const handleLogin = (email, password) => {
         // In a real application, you would send the login credentials to the server for verification
-        // For this demonstration, we consider any input as valid credentials
+        // For this demonstration, you would consider any input as valid credentials
         if (email && password) {
             setLoggedIn(true);
             setShowAuth(false);
@@ -24,40 +25,43 @@ export default function TopicListNav () {
         setLoggedIn(false);
     };
 
-    const handleShowLogin = () => {
-        setShowAuth(true);
-        setIsLogin(true);
+    const handleToggleAuth = () => {
+        setShowAuth(!showAuth);
+        setShowLogin(true);
     };
 
-    const handleShowRegister = () => {
-        setShowAuth(true);
-        setIsLogin(false);
+    const handleCloseAuth = () => {
+        setShowAuth(false);
     };
+
     return (
         <>
-            <div className="topic-list-add">
-                <div className="">
-                    {loggedIn ? (
-                        <button className="button-login" onClick={handleLogout}>Logout</button>
-                    ) : (
-                        <>
-                            <button className="button-login" onClick={handleShowRegister}>Register</button>
-                           <button className="button-login" onClick={handleShowLogin}>Login</button>
-                        </>
-                    )}
-                </div>
+        <div >
 
+                <>
+            <div className="topic-list-add">
             </div>
             <div className="topic-list-search">
-                {loggedIn ? (
-                   <TopicsList/>
-                ) : (
-                    showAuth && <AuthComponent onLogin={handleLogin} isLogin={isLogin} />
-                )}
-            </div>
+
+
+            </div></>
+
+                {loggedIn ? (    <TopicsList/>
+            ) : (
+                <>
+                    {showAuth && (
+                        <AuthComponent
+                            onLogin={handleLogin}
+                            onClose={handleCloseAuth}
+                            showLogin={showLogin}
+                        />
+                    )}
+                </>
+            )}
             <div className="footer-topic">
             </div>
             <Footer/>
+        </div>
         </>
     )
 }

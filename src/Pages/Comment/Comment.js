@@ -88,8 +88,8 @@ const Comment = ({ id, text, date, picture, file, onEdit, onDelete }) => {
                         </div>
                     )}
                     {editedFile && <p>File: {editedFile}</p>}
-                    <input type="file" accept="image/*" onChange={handlePictureChange} />
-                    <input type="file" onChange={handleFileChange} />
+                    <input disabled={true} type="file" accept="image/*" onChange={handlePictureChange} />
+                    <input disabled={true } type="file" onChange={handleFileChange} />
                     <label>Font Style:</label>
                     <select value={fontStyle} onChange={handleFontStyleChange}>
                         <option value="Arial">Arial</option>
@@ -98,7 +98,7 @@ const Comment = ({ id, text, date, picture, file, onEdit, onDelete }) => {
                         {/* Add more font options here */}
                     </select>
                     <label>Font Size:</label>
-                    <input type="number" value={fontSize} onChange={handleFontSizeChange} />
+                    <input disabled={true} type="number" value={fontSize} onChange={handleFontSizeChange} />
                     <label>Font Weight:</label>
                     <select value={fontWeight} onChange={handleFontWeightChange}>
                         <option value="normal">Normal</option>
@@ -118,7 +118,7 @@ const Comment = ({ id, text, date, picture, file, onEdit, onDelete }) => {
                         </div>
                     )}
                     {file && <p>File: {file}</p>}
-                  <button  disabled={true} onClick={handleEdit}>Edit</button>
+                  <button  onClick={handleEdit}>Edit</button>
                  <button  disabled={true} onClick={() => onDelete(id)}>Delete</button>
                 </div>
             )}
