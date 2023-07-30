@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TopicService from "../../../Services/TopicService";
 import { Link } from "react-router-dom";
+import AddTopic from "./AddTopics";
 
 const TopicsList = () => {
     const [topics, setTopics] = useState([]);
@@ -86,7 +87,7 @@ const TopicsList = () => {
             </div>
             <div className="col-md-6">
                 <h4>Topics List</h4>
-
+                <AddTopic/>
                 <ul className="list-group">
                     {topics &&
                         topics.map((tutorial, index) => (

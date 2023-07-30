@@ -1,0 +1,71 @@
+/* styles for CommentList and AddComment */
+.CommentList,
+.AddComment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CommentsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* styles for Comment and AddComment */
+.Comment,
+.AddComment textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 0 calc(50% - 20px); /* Each comment or textarea will have a maximum width of 50% minus the margins */
+}
+
+.Comment p,
+.AddComment p {
+    margin: 0;
+    padding: 5px;
+}
+
+.Comment textarea,
+.AddComment textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    margin-bottom: 5px;
+}
+
+.Comment button,
+.AddComment button {
+    margin-right: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Comment button:hover,
+.AddComment button:hover {
+    background-color: #45a049;
+}
+
+/* Media queries for responsive design */
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    .CommentsContainer,
+    .AddComment {
+        flex-direction: column;
+    }
+
+    .Comment,
+    .AddComment textarea {
+        flex: 1 0 calc(100% - 20px); /* Each comment or textarea will have a maximum width of 100% minus the margins */
+    }
+}

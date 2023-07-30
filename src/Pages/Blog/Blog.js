@@ -3,8 +3,13 @@ import '../../Style/Main.css';
 import Footer from "../Footer/Footer";
 import BigTextCard from "../../Components/Card/TextCards/Big/BigTextCard";
 
+import CommentList from "../Comment/CommentList";
+
+
+
 //TODO Remove all TEST DATA and only add 1 card component WIDE.
 export default function Blog (){
+
 
     return (
         <>
@@ -25,7 +30,7 @@ export default function Blog (){
                         </nav>
                 </div>
             </div>
-
+               <CommentList/>
             <br></br>
             <div className="footer-down">
                 <Footer/>
