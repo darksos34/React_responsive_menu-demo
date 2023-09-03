@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
+import LoginButton from "../../LoginButton";
 
 const SubMenu = ({handleNavToggle}) => {
 
@@ -18,6 +19,7 @@ const SubMenu = ({handleNavToggle}) => {
                             to="/portfolio">Portfolio</StyledLink>
                 <StyledLink className="animate__animated animate__fadeInRight" onClick={handleNavToggle}
                             to="/topiclist">Topic List</StyledLink>
+                <LoginButton/>
                 <CloseToggle className="animate__animated animate__fadeInRight"
                              onClick={handleNavToggle}>
                     <FaTimes/>
@@ -80,7 +82,7 @@ const CloseToggle = styled.button`
   place-items: center;
   font-size: 1rem;
   cursor: pointer;
-  
+
 `;
 
 export default SubMenu

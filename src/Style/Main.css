@@ -13,21 +13,19 @@
 }
 
 .conatainer-social{
-    flex: 1;
-
-    direction: revert;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
 }
 
 .links-instagram img {
-    min-width: 20px;
-    max-height: 80px;
+    min-width: 10px;
+    max-height: 30px;
     color: #333333;
 }
 
 .links-twitter img{
-    min-width: 20px;
-    max-height: 80px;
+    min-width: 10px;
+    max-height: 30px;
     color: #333333;
 }

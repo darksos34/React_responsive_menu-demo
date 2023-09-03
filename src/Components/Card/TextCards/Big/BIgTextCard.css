@@ -5,7 +5,6 @@
     background-color: #f7f7f7;
     padding: 25px 50px 30px;
     margin: auto;
-
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 10px;
@@ -24,7 +23,21 @@
     color: #080a0a;
     justify-items: auto;
 }
-
+.blog-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    transition: transform .3s ease;
+    background-color: #f7f7f7;
+    padding: 25px 50px 30px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 8px -5px rgba(0, 0, 0, 0.3);
+}
 .btxcard__textcard{
     color: #d73f3f;
     max-width: 10px;

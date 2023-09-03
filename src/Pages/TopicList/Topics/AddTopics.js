@@ -55,6 +55,7 @@ const AddTopic = () => {
             ) : (
                 <div>
                     <div className="form-group">
+                        <p>Add Topic</p>
                         <label htmlFor="title">Title</label>
                         <input
                             type="text"
