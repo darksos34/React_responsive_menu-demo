@@ -22,7 +22,7 @@ export default function Blog (){
                     <br/>
                     Alles wat nu zichtbaar moet nog gekoppeld worden met een rest server.
                     <br/>
-                    Vanaf September 2023 zal er elke week een nieuwe feature worden geupload.
+                   Binnenkort zal er elke week een nieuwe feature's worden geüpload.
                 </div>
             </div>
             <br></br>
